@@ -1,0 +1,67 @@
+	<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel = "stylesheet" href = "jquery.mobile-1.4.4.min.css">
+		<script src = "jquery-1.11.1.min.js"></script>
+	<script src = "jquery.mobile-1.4.4.min.js"></script>
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script> 
+	<script type = "text/javascript" src = "functions.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+</head>
+<body>
+
+<!-- Reservations page -->
+<div data-role = "page" id = "reserve" data-theme="b">
+	<div data-role = "header">
+		<h1> dO_iN Bus Control Center<br>Driver & Admin</h1>
+	<div data-role="navbar">
+					<ul>
+						<li>
+					<a href="pages.html" data-icon="home" data-transition = "slideup">Home</a>
+						</li>
+						<!-- <li>
+					<a href="pages.html/#pagetwo" data-icon="grid" data-transition = "slidefade">Control Room</a>
+						</li> -->
+						</ul>
+						</div>
+	</div>
+
+	<div role = "main" class = "ui-content">
+				<br>
+
+		<div data-role="navbar">
+			<ul>
+				<li>
+			<center><i>We take you anywhere in Accra with only GHc 5.00</i></center>
+		</li>
+		</ul>
+		</div><br><br>
+
+		<button id="get_res">View Reservations For Today</button><br>
+		<br>
+		  <div align="center">Total # of reservations</div><div id="list" style="font-size:200%" align="center">
+		    0
+		  </div>
+
+		  <ul id="run">
+
+  		</ul>
+
+		</div>
+		<div data-role = "footer">
+		<table align="center">
+			<tr>
+				<td>
+		<h4>Kobby_Ohene's Bus App</h4></td>
+		<td>
+		<!-- <a href="login.php" data-role="button" data-transition = "flip">Sign Out</a></td> -->
+		</tr>
+	</table>
+	</div>
+
+	</div>
+
+	</body>
+</html>

@@ -1,0 +1,229 @@
+	<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel = "stylesheet" href = "jquery.mobile-1.4.4.min.css">
+		<script src = "jquery-1.11.1.min.js"></script>
+	<script src = "jquery.mobile-1.4.4.min.js"></script>
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script> 
+	<script type = "text/javascript" src = "functions.js"></script>
+	<script type = "text/javascript" src = "Barcode.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+</head>
+<body onload="initialize()">
+
+	<!-- Page One -->
+	<div data-role = "page" id = "pageone" data-theme="b">
+	<div data-role = "header">
+		<h3> dO_iN Bus Control Center<br>Driver & Admin</h3>
+	<div data-role="navbar">
+					<ul>
+						<li>
+					<a href="#pageone" class="ui-btn-active ui-state-persist" data-icon="home" data-transition = "slideup">Home</a>
+						</li>
+						<li>
+					<a href="#pagetwo" data-icon="grid" data-transition = "slidefade">Control Room</a>
+						</li>
+						</ul>
+						</div>
+	</div>
+
+	<div role = "main" class = "ui-content">
+				<br>
+
+		<div data-role="navbar">
+			<ul>
+				<li>
+			<center><i>We take you anywhere in Accra with only GHc 5.00</i></center>
+		</li>
+		</ul>
+		</div>
+
+		<div data-role="collapsible-set">
+			<div data-role="collapsible">
+				<h1>Weekday Morning Route</h1>
+				<p> Christ The King Church </p>
+				<p> Airport </p>
+				<p> Accra Mall </p>
+				<p> Atomic Juntion </p>
+				<p> Kwabenya </p>
+				<p> Pokuase </p>
+				<p> Abom </p>
+				<p> Ashesi University College </p>
+			</div>
+
+			<div data-role="collapsible">
+				<h1>Weekday Evening Route</h1>
+				<p> Ashesi University College </p>
+				<p> Abom </p>
+				<p> Kwabenya </p>
+				<p> Atomic Juntion </p>
+				<p> Accra Mall </p>
+				<p> Airport </p>
+				<p> Christ The King Church </p>
+			</div>
+
+			<div data-role="collapsible">
+				<h1>Weekend Route</h1>
+				<p> Ashesi University College </p>
+				<p> Abom </p>
+				<p> Pokuase </p>
+				<p> Kwabenya </p>
+				<p> Atomic Juntion </p>
+				<p> Accra Mall </p>
+				<p> Airport </p>
+				<p> Christ The King Church </p>
+			</div>
+
+		</div>
+		<br><br>
+
+		<div data-role="collapsible">
+				<h1>Bus Take-Off Times</h1>
+				<p> Weekday Mornings: 06:30Hrs</p>
+				<p> Weekday Evenings: 17:10Hrs </p>
+				<p> Weekends: 14:00Hrs </p>
+			</div>
+
+				<br><br>
+
+		<div data-role="collapsible">
+				<h1>Bus Starting Points</h1>
+				<p> Weekday mornings: Christ The King Church</p>
+				<p> Weekday Evenings: Ashesi University College </p>
+				<p> Weekends: Ashesi University College </p>
+			</div>
+
+
+			<div data-role = "footer">
+			<table align="center">
+			<tr>
+				<td>
+				<h4>Kobby_Ohene's Bus App</h4></td><td width="40"></td>
+				<td>
+				<a href="reserve.html" data-role="button" data-transition="pop">View Reservations For Today</a>
+            </td>
+			<td>
+			<a href="index.html" data-role="button" data-transition = "flip">Log Out</a></td>
+			</tr>
+			</table>
+			</div>
+        	</div>
+		</div>
+
+<!--Page Two-->
+<div data-role = "page" id = "pagetwo" data-theme="b">
+	<div data-role = "header">
+		<h1> dO_iN Bus Control Center<br>Driver & Admin</h1>
+	<div data-role="navbar">
+					<ul>
+						<li>
+					<a href="#pageone" data-icon="home" data-transition = "slideup">Home</a>
+						</li>
+						<li>
+					<a href="#pagetwo" class="ui-btn-active ui-state-persist" data-icon="grid" data-transition = "slidefade">Control Room</a>
+						</li>
+						</ul>
+						</div>
+	</div>
+
+	<div role = "main" class = "ui-content">
+				<br>
+
+		<div data-role="navbar">
+			<ul>
+				<li>
+			<center><i>We take you anywhere in Accra with only GHc 5.00</i></center>
+		</li>
+		</ul>
+		</div><br><br>
+		<table align="center">
+			<tr>
+				<td>
+					Number of Seats Left</td> <td width="20"></td> <td> 
+					<p id='seats' style='font-size:250%'>0</p>
+					<!-- <input type="text" name="seats" id="seats" value="0"> -->
+				</td>
+
+				<td width="50">
+				</td>
+
+				<td># of passengers
+				</td><td width="20"></td>
+				<td><p id='embarked' style='font-size:150%'>0</p></td>
+
+			</tr>
+
+			<tr height="20">
+				<td>Revenue Received (GHc)
+				</td><td width="20"></td>
+				<td><p id='profit' style='font-size:150%'>0</p></td>
+
+			</tr>
+
+			<tr height="40">
+			</tr>
+		</table>
+			<div align="center" data-role="controlgroup" data-type="horizontal">
+			<Caption of group:</p>
+				<table>
+					<tr>
+						<td width="80">
+							<!-- <a href="#" data-role="button" data-icon="plus" data-icon position="notext"></a> -->
+							<button id="remove" data-icon="plus">Add Passenger</button></td>
+						<td width="70"></td>
+						<td width="80">
+							<!-- <a href="#" data-role="button" data-icon="minus" data-icon position="notext"></a> -->
+							<button id="add" data-icon="minus">Remove Passenger</button></td>
+							</tr>
+
+							<tr height="30">
+							</tr>
+
+							<tr>
+						<td align="right">
+							<!-- <a href="#" data-role="button">Full</a> -->
+							<button id="full">Full</button></td>
+						<td width="70"></td>
+						<td width="70">
+							<!-- <a href="#" data-role="button">Empty</a> -->
+							<button id="reset" data-icon="refresh">Reset</button></td>
+							</tr>
+						</table>
+			</div><br>
+			<div role="main" class="ui-content" align="center">
+			<table align="center">
+				<tr>
+				<td>
+					 	<!-- <p id="gpsresult" style= 'font-size:100%'> Loading GPS...</p> -->
+					 	<p id='location' style= 'font-size:100%' align="center">Finding your current location...</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div id="info">
+							      <button id="btnInit">Click for Coordinates</button>
+							 
+							      <!-- <button id="btnStop" >Stop monitoring</button> -->
+							    </div>
+				</td>
+			</tr>
+		</table>
+		</div>
+	</div>
+	<div data-role = "footer">
+		<table align="center">
+			<tr>
+				<td>
+		<h4>Kobby_Ohene's Bus App</h4></td>
+		<td>
+		<!-- <a href="login.php" data-role="button" data-transition = "flip">Sign Out</a></td> -->
+		</tr>
+	</table>
+	</div>
+
+</div>
+
+</body>
+</html>

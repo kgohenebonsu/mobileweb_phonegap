@@ -1,0 +1,64 @@
+	<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel = "stylesheet" href = "jquery.mobile-1.4.4.min.css">
+		<script src = "jquery-1.11.1.min.js"></script>
+	<script src = "jquery.mobile-1.4.4.min.js"></script>
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script> 
+	<script type = "text/javascript" src = "functions.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+</head>
+<body>
+
+		<!-- Login page -->
+
+	<div data-role = "page" id = "pagelogin" data-theme="b">
+	<div data-role = "header">
+		<h1> dO_iN Bus Control Center<br>Driver & Admin</h1>
+	</div>
+
+	<div data-role="fieldcontain">
+		<center><p id='log' style='font-size:100%'></p></center>
+	<form name = "myform">
+		<center><img src="busadmin.png" width="150px" height="150px"></center>
+		<table align="center">
+			<tr>
+				<td width="300px"></td>
+				<td colspan="2" align="center"></td>
+				<td width="300px"></td>
+			</tr>
+			<tr>
+				<td width="300px"></td>
+				<td>username</td>
+				<td><input type="text" name="username"></td>
+				<td width="300px"></td>
+			</tr>
+			<tr>
+				<td width="300px"></td>
+				<td>password</td>
+				<td><input type="password" name="pword"></td>
+				<td  width="300px"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><a href="pages.html"><input type="submit" data-transition = "pop" name="Submit" 
+					value="LOGIN" onclick= "" onclick="location.href='pages.html'"></a></td>
+				<td></td>
+			</tr>
+		</table>
+	</form>
+			<br><br>
+			<center>Forgotten password?</center>
+			<br><br>
+
+			<div data-role = "footer">
+		<h1>Kobby_Ohene's Bus App</h1>
+	</div>
+	</div>
+
+		</div>
+	</body>
+	</html>
