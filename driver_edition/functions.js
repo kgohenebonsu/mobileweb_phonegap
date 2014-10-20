@@ -181,7 +181,7 @@ $(document).ready(function(){
     {
       var diff = sl-1;
       $('#seats').text(diff);
-      var u ="index_json_response.php?cmd=3&id=1&sl="+diff+"&loc="+loc;
+      var u ="http://50.63.128.135/~csashesi/class2015/kwabena-ohene-bonsu/phonegap_myphp/driver_edition/index_json_response.php?cmd=3&id=1&sl="+diff+"&loc="+loc;
       var num_passengers = parseInt($('#embarked').text(), 10);
       num_passengers ++;
       $('#embarked').text(num_passengers);
@@ -199,7 +199,7 @@ $(document).ready(function(){
   if(sl < 33 && sl >= 0) {
   var sum = sl+1;
   $('#seats').text(sum);
-  var u ="index_json_response.php?cmd=3&id=1&sl="+sum+"&loc="+loc;
+  var u ="http://50.63.128.135/~csashesi/class2015/kwabena-ohene-bonsu/phonegap_myphp/driver_edition/index_json_response.php?cmd=3&id=1&sl="+sum+"&loc="+loc;
   return syncAjax(u);
   }
   });
@@ -207,7 +207,7 @@ $(document).ready(function(){
 
 //reset function
   $("#reset").click(function(){
-    r=syncAjax("index_json_response.php?cmd=1");
+    r=syncAjax("http://50.63.128.135/~csashesi/class2015/kwabena-ohene-bonsu/phonegap_myphp/driver_edition/index_json_response.php?cmd=1");
   $('#seats').text(r.mybusapp.capacity);
   $('#embarked').text(0);
   $('#profit').text(0);
@@ -215,7 +215,7 @@ $(document).ready(function(){
 
   //full function
   $("#full").click(function(){
-    r=syncAjax("index_json_response.php?cmd=1&id=1");
+    r=syncAjax("http://50.63.128.135/~csashesi/class2015/kwabena-ohene-bonsu/phonegap_myphp/driver_edition/index_json_response.php?cmd=1&id=1");
   $('#seats').text(0);
   // $('#embarked').text(33);
   // $('#profit').text(33*5);
@@ -223,9 +223,9 @@ $(document).ready(function(){
   
  //get Reservations
  $("#get_res").click(function(){
- r=syncAjax("index_json_response.php?cmd=5");
+ r=syncAjax("http://50.63.128.135/~csashesi/class2015/kwabena-ohene-bonsu/phonegap_myphp/driver_edition/index_json_response.php?cmd=5");
  $('#list').text(r.mybusapp.bkid);
- r=syncAjax("index_json_response.php?cmd=4");
+ r=syncAjax("http://50.63.128.135/~csashesi/class2015/kwabena-ohene-bonsu/phonegap_myphp/driver_edition/index_json_response.php?cmd=4");
  for (var i = 0; i < r.mybusapp.length; i++)
  {
    var names = r.mybusapp[i].personname+ " is currently at "+ r.mybusapp[i].pickuppoint;

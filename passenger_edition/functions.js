@@ -173,7 +173,7 @@ function errorFunction(){
   $(document).ready(function(){
 
     $("#refresh").click(function(){
-    r=syncAjax("index_json_response.php?cmd=1&id=1");
+    r=syncAjax("http://50.63.128.135/~csashesi/class2015/kwabena-ohene-bonsu/phonegap_myphp/passenger_edition/index_json_response.php?cmd=1&id=1");
   $('#seats').text(r.mybusapp.avail_seats);
   $('#location').text(r.mybusapp.location);
   });
@@ -181,14 +181,14 @@ function errorFunction(){
     $("#booking").click(function(){
       var nm = $('#uname').val();
       var loc = $('#location_select').val();
-    return syncAjax("index_json_response.php?cmd=10&un="+nm+"&loc="+loc);
+    return syncAjax("http://50.63.128.135/~csashesi/class2015/kwabena-ohene-bonsu/phonegap_myphp/passenger_edition/index_json_response.php?cmd=10&un="+nm+"&loc="+loc);
     document.getElementById("booking").disabled = true;
   });
 
     $('#getbc').click(function(){
       var nm = $('#cname').val();
       // var cc = ($('#code').val());
-      r = syncAjax("index_json_response.php?cmd=6&name="+nm);
+      r = syncAjax("http://50.63.128.135/~csashesi/class2015/kwabena-ohene-bonsu/phonegap_myphp/passenger_edition/index_json_response.php?cmd=6&name="+nm);
       $('#codearea').text(r.mybusapp.bcode);
     });
 
